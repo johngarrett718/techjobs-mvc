@@ -49,7 +49,7 @@
     <!--</table>-->
 
     <!--</div>-->
-    <div th:replace="fragments :: job-tables"></div>
+    <div th:if="${jobs != null}" th:replace="fragments :: job-tables"></div>
 
 
 </div>

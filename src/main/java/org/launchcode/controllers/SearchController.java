@@ -19,6 +19,8 @@ public class SearchController {
 
     @RequestMapping(value = "")
     public String search(Model model) {
+//        ArrayList<HashMap<String, String>> jobs = new ArrayList<HashMap<String, String>>();
+//        model.addAttribute("jobs", jobs);
         model.addAttribute("columns", ListController.columnChoices);
         return "search";
     }
@@ -38,6 +40,7 @@ public class SearchController {
         }
 
         model.addAttribute("jobs", jobs);
+        model.addAttribute("jobSize", jobs.size() + " Result(s)");
 
 
         return "search";

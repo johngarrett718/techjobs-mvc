@@ -28,7 +28,7 @@
     </div>
 
     <div th:fragment="job-tables">
-        <h3 th:text="${jobs.size()} + ' Result(s)'"></h3>
+        <h3 th:text="${jobSize}"></h3>
         <table class="job-listing" th:each="job : ${jobs}">
             <tbody>
             <tr th:each="row: ${job}">
